@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hudu-gugui.github.io/"/>
-  <updated>2019-08-02T03:23:00.418Z</updated>
+  <updated>2019-08-03T08:51:48.682Z</updated>
   <id>https://hudu-gugui.github.io/</id>
   
   <author>
@@ -21,20 +21,18 @@
     <link href="https://hudu-gugui.github.io/%E5%88%9D%E8%AF%86Java.html"/>
     <id>https://hudu-gugui.github.io/初识Java.html</id>
     <published>2019-08-01T13:57:57.000Z</published>
-    <updated>2019-08-02T03:23:00.418Z</updated>
+    <updated>2019-08-03T08:51:48.682Z</updated>
     
-    <content type="html"><![CDATA[<h1>1、Java基础</h1><p>三部分：</p>    <p>基础语法：基本语句、流程控制</p>    <p>编程思想：面向对象，第一层：封装、继承、多态，第二层：怎么使用面向对象的思想去解决问题。第三层：现实问题的处理，如何使用面向对象解决现实问题。</p>        <p>高级应用：线程、网络、IO、XML解析</p><img src="/images/2.jpg" alt="picture"><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Driver</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Track myTrack = <span class="keyword">new</span> Track();             </span><br><span class="line">    myTrack.setTitle(<span class="string">"Watching The Wheels"</span>);</span><br><span class="line">    Duration myDuration = <span class="keyword">new</span> Duration(<span class="number">0</span>, <span class="number">3</span>, <span class="number">48</span>);</span><br><span class="line">    myTrack.setDuration(myDuration);</span><br><span class="line">    System.out.println(<span class="string">"myTrack is: "</span> + myTrack);   </span><br><span class="line">    System.out.println(<span class="string">"Title = "</span> + myTrack.getTitle());</span><br><span class="line">    System.out.println(<span class="string">"Duration = "</span> + myTrack.getDuration().toString());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<blockquote><h1 id="什么是Java？"><a href="#什么是Java？" class="headerlink" title="什么是Java？"></a>什么是Java？</h1></blockquote><p>是编程语言<br>开发环境：提供了一套应用程序的接口，解压rt.jar，解压src.zip查看源码<br>应用程序环境<br>并不仅仅是编程语言，而更准确地说是一个生态系统</p><blockquote><h1 id="为什么发明Java？"><a href="#为什么发明Java？" class="headerlink" title="为什么发明Java？"></a>为什么发明Java？</h1></blockquote><p>1.提供了一套编译环境<br>&emsp;快速发展<br>&emsp;一次编写，到处运行，应用程序跨平台，中间层：给上层应用提供了一套API，针对不同的操作系统提供了JVM<br>&emsp;多线程，程序级别的多线程<br>&emsp;支持动态更新，其中一个发生了改变，这个编译后，其他的额能自动更新。<br>2.提供了一个更简单的编程方法<br>&emsp;更健壮：没有指针，没有内存管理，面向对象编程<br>3.如何实现上述目标的<br>&emsp;JVM，垃圾回收机制(Garbage Collection)，代码安全验证</p><a id="more"></a><blockquote><h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1></blockquote><h2 id="Java基础分为三部分："><a href="#Java基础分为三部分：" class="headerlink" title="Java基础分为三部分："></a>Java基础分为三部分：</h2><p>&emsp;1.基础语法：基本语句、流程控制<br>&emsp;2.编程思想：面向对象，第一层：封装、继承、多态，第二层：怎么使用面向对象的思想去解决问题。<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;第三层：现实问题的处理，如何使用面向对象解决现实问题。<br>&emsp;3.高级应用：线程、网络、IO、XML解析。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Driver</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Track myTrack = <span class="keyword">new</span> Track();             </span><br><span class="line">    myTrack.setTitle(<span class="string">"Watching The Wheels"</span>);</span><br><span class="line">    Duration myDuration = <span class="keyword">new</span> Duration(<span class="number">0</span>, <span class="number">3</span>, <span class="number">48</span>);</span><br><span class="line">    myTrack.setDuration(myDuration);</span><br><span class="line">    System.out.println(<span class="string">"myTrack is: "</span> + myTrack);   </span><br><span class="line">    System.out.println(<span class="string">"Title = "</span> + myTrack.getTitle());</span><br><span class="line">    System.out.println(<span class="string">"Duration = "</span> + myTrack.getDuration().toString());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h1&gt;1、Java基础&lt;/h1&gt;
-&lt;p&gt;三部分：&lt;/p&gt;
-    &lt;p&gt;基础语法：基本语句、流程控制&lt;/p&gt;
-    &lt;p&gt;编程思想：面向对象，第一层：封装、继承、多态，第二层：怎么使用面向对象的思想去解决问题。第三层：现实问题的处理，如何使用面向对象解决现实问题。&lt;/p&gt;
- 
-      
+      &lt;blockquote&gt;
+&lt;h1 id=&quot;什么是Java？&quot;&gt;&lt;a href=&quot;#什么是Java？&quot; class=&quot;headerlink&quot; title=&quot;什么是Java？&quot;&gt;&lt;/a&gt;什么是Java？&lt;/h1&gt;&lt;/blockquote&gt;
+&lt;p&gt;是编程语言&lt;br&gt;开发环境：提供了一套应用程序的接口，解压rt.jar，解压src.zip查看源码&lt;br&gt;应用程序环境&lt;br&gt;并不仅仅是编程语言，而更准确地说是一个生态系统&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h1 id=&quot;为什么发明Java？&quot;&gt;&lt;a href=&quot;#为什么发明Java？&quot; class=&quot;headerlink&quot; title=&quot;为什么发明Java？&quot;&gt;&lt;/a&gt;为什么发明Java？&lt;/h1&gt;&lt;/blockquote&gt;
+&lt;p&gt;1.提供了一套编译环境&lt;br&gt;&amp;emsp;快速发展&lt;br&gt;&amp;emsp;一次编写，到处运行，应用程序跨平台，中间层：给上层应用提供了一套API，针对不同的操作系统提供了JVM&lt;br&gt;&amp;emsp;多线程，程序级别的多线程&lt;br&gt;&amp;emsp;支持动态更新，其中一个发生了改变，这个编译后，其他的额能自动更新。&lt;br&gt;2.提供了一个更简单的编程方法&lt;br&gt;&amp;emsp;更健壮：没有指针，没有内存管理，面向对象编程&lt;br&gt;3.如何实现上述目标的&lt;br&gt;&amp;emsp;JVM，垃圾回收机制(Garbage Collection)，代码安全验证&lt;/p&gt;
     
     </summary>
     
@@ -46,41 +44,69 @@
       <category term="Java" scheme="https://hudu-gugui.github.io/tags/Java/"/>
     
       <category term="Java基础" scheme="https://hudu-gugui.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
-    
-      <category term="环境变量" scheme="https://hudu-gugui.github.io/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
-    
-      <category term="JVM虚拟机" scheme="https://hudu-gugui.github.io/tags/JVM%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
       <category term="JDK" scheme="https://hudu-gugui.github.io/tags/JDK/"/>
     
   </entry>
   
   <entry>
-    <title>Java学习</title>
-    <link href="https://hudu-gugui.github.io/Java%E5%AD%A6%E4%B9%A0.html"/>
-    <id>https://hudu-gugui.github.io/Java学习.html</id>
-    <published>2019-07-31T12:02:04.000Z</published>
-    <updated>2019-08-01T12:02:04.000Z</updated>
+    <title>JDK、JRE、JVM解析</title>
+    <link href="https://hudu-gugui.github.io/JDK%E3%80%81JRE%E3%80%81JVM%E8%A7%A3%E6%9E%90.html"/>
+    <id>https://hudu-gugui.github.io/JDK、JRE、JVM解析.html</id>
+    <published>2019-07-31T07:47:40.000Z</published>
+    <updated>2019-08-01T13:05:24.000Z</updated>
     
-    <content type="html"><![CDATA[<!-- <iframe width="100%" height="560" src="//player.bilibili.com/player.html?aid=41949084&cid=75021374&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> --><p><a href="https://www.bilibili.com/" target="_blank" rel="noopener">哔哩哔哩</a></p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="110" src="//music.163.com/outchain/player?type=4&id=334309073&auto=0&height=90"></iframe>]]></content>
+    <content type="html"><![CDATA[<blockquote><h4 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h4></blockquote><p><font color="red">指Java开发工具包</font>，包含了Java的开发工具：编译工具，打包工具运行等工具，如javac、java、javadoc等。</p><p>bin:&emsp;java的相关命令，如java  javac  jar  javadoc<br>db:&emsp;java提供的数据库<br>demo/sample:&emsp;java代码的一些示例<br>include:&emsp;C语言的头文件等内容<br>jre:&emsp;java的运行环境<br>lib:&emsp;java所用的基本的jar包</p><a id="more"></a><blockquote><h4 id="JRE"><a href="#JRE" class="headerlink" title="JRE"></a>JRE</h4></blockquote><p><font color="red">指Java运行环境</font>，包括JVM和Java的核心库类，如果想要运行一个开发好的应用，只需要安装JRE即可。</p><blockquote><h4 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h4></blockquote><p><font color="red">简称Java虚拟机(java virtual machine)</font>，是用软件来模拟一个虚拟的环境。</p><h5 id="Java虚拟机基本结构"><a href="#Java虚拟机基本结构" class="headerlink" title="Java虚拟机基本结构"></a>Java虚拟机基本结构</h5><p><img src="/images/JVM.png" alt="JVM"></p><h5 id="Java运行基本过程："><a href="#Java运行基本过程：" class="headerlink" title="Java运行基本过程："></a>Java运行基本过程：</h5><p>编写.java文件—&gt;编译为.class文件—&gt;类加载–&gt;字节码验证–&gt;JIT运行<br>字节码验证的内容:<br>&emsp;代码要符合JVM的规范<br>&emsp;代码破坏计算机的系统或者硬件<br>&emsp;栈不能溢出<br>&emsp;方法的参数类型要正确<br>&emsp;类型转换要正确</p><h5 id="类加载"><a href="#类加载" class="headerlink" title="类加载:"></a>类加载:</h5><p>双亲委托机制<br>把我们写好并编译成的.class字节码文件从硬盘中加载到内存</p><h5 id="JVM使用类加载器来完成类加载的过程"><a href="#JVM使用类加载器来完成类加载的过程" class="headerlink" title="JVM使用类加载器来完成类加载的过程"></a>JVM使用类加载器来完成类加载的过程</h5><p>类加载器有:<br>类装载器：（分为4步）1》2》3》4<br>&emsp;1、启动类装载器：bootstrap class loader<br>&emsp;&emsp;&emsp;&emsp;从jdk的安装目录下  jdk/jre/lib/rt.jar<br>&emsp;&emsp;&emsp;&emsp;rt.jar 是个包，放的是Java作为开发环境的所有的库<br>&emsp;2、扩展类装载器：extensible class loader<br>&emsp;&emsp;&emsp;&emsp;从jdk的安装目录下 jdk/jre/lib/ext/*.jar<br>&emsp;&emsp;&emsp;&emsp;jdk下的所有的.jar 文件<br>&emsp;3、系统类装载器：system class loader<br>&emsp;&emsp;&emsp;&emsp;$CLASSPATH<br>&emsp;&emsp;&emsp;&emsp;你所配置的classpath<br>&emsp;4、网络类装载器：network class loader<br>类加载器:从一个指定路径下面去加载代码运行时需要用到的java类</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;!-- &lt;iframe width=&quot;100%&quot; height=&quot;560&quot; src=&quot;//player.bilibili.com/player.html?aid=41949084&amp;cid=75021374&amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; fr
-      
+      &lt;blockquote&gt;
+&lt;h4 id=&quot;JDK&quot;&gt;&lt;a href=&quot;#JDK&quot; class=&quot;headerlink&quot; title=&quot;JDK&quot;&gt;&lt;/a&gt;JDK&lt;/h4&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;font color=&quot;red&quot;&gt;指Java开发工具包&lt;/font&gt;，包含了Java的开发工具：编译工具，打包工具运行等工具，如javac、java、javadoc等。&lt;/p&gt;
+&lt;p&gt;bin:&amp;emsp;java的相关命令，如java  javac  jar  javadoc&lt;br&gt;db:&amp;emsp;java提供的数据库&lt;br&gt;demo/sample:&amp;emsp;java代码的一些示例&lt;br&gt;include:&amp;emsp;C语言的头文件等内容&lt;br&gt;jre:&amp;emsp;java的运行环境&lt;br&gt;lib:&amp;emsp;java所用的基本的jar包&lt;/p&gt;
     
     </summary>
     
       <category term="Java" scheme="https://hudu-gugui.github.io/categories/Java/"/>
     
-      <category term="初识Java" scheme="https://hudu-gugui.github.io/categories/Java/%E5%88%9D%E8%AF%86Java/"/>
+    
+      <category term="JDK" scheme="https://hudu-gugui.github.io/tags/JDK/"/>
+    
+      <category term="JRE" scheme="https://hudu-gugui.github.io/tags/JRE/"/>
+    
+      <category term="JVM" scheme="https://hudu-gugui.github.io/tags/JVM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java环境变量配置</title>
+    <link href="https://hudu-gugui.github.io/Java%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE.html"/>
+    <id>https://hudu-gugui.github.io/Java环境变量配置.html</id>
+    <published>2019-07-31T06:54:15.000Z</published>
+    <updated>2019-08-03T08:44:16.121Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><h3 id="Java-HOME"><a href="#Java-HOME" class="headerlink" title="Java_HOME"></a>Java_HOME</h3></blockquote><p>在下方的【系统变量】中，并不存在JAVA_HOME变量,那么我们需要点击【新建】<br>windows:<br>   JAVA_HOME:JDK安装的目录路径<br>   <font color="red">例：D:\Java\jdk1.8.0_151</font></p><p><img src="/images/JAVA_HOME.png" alt="JAVA_HOME"></p><p>用JAVA写的软件都需要本地JDK的支持，它回去找本地配的JAVA_HOME，很多时候是给第三方用的，比如maven，tomcat，hadoop。</p><a id="more"></a><blockquote><h3 id="CLASSPATH"><a href="#CLASSPATH" class="headerlink" title="CLASSPATH"></a>CLASSPATH</h3></blockquote><p>class文件、jar包 的搜索路径。保存的是一些目录和jar文件的地址，这些路径是为java程序在编译和运行时搜索类而用的，为java程序所依赖的接口、类指定一个搜索路径。<font color="red">一般不需要配置，默认值为.当前目录。</font> </p><blockquote><h3 id="PATh"><a href="#PATh" class="headerlink" title="PATh"></a>PATh</h3></blockquote><p>在cmd终端运行dos命令时命令对应一个特定功能，特定功能由对应应用程序实现，PATH里面存放命令的搜索路径。JDK安装目录里面的命令目录。</p><p>同样是在【系统变量中】我们可以看到path变量已经存在，那么我们只需要点击【编辑】，进入path变量的编辑</p><p><img src="/images/PATH1.png" alt="PATH"></p><p>变量名不变，变量值改为【%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;】，最后点击确定。</p><p><img src="/images/PATH2.png" alt="PATH"></p><blockquote><h3 id="测试环境是否配置成功"><a href="#测试环境是否配置成功" class="headerlink" title="测试环境是否配置成功"></a>测试环境是否配置成功</h3></blockquote><p>使用<kbd>Win</kbd>+<kbd>R</kbd> 输入cmd<br>在新打开的命令窗口中输入命令:java或者javac 后看到相应的信息提示即可.<br>  java -version<br><img src="/images/java-version.png" alt="PATH"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;h3 id=&quot;Java-HOME&quot;&gt;&lt;a href=&quot;#Java-HOME&quot; class=&quot;headerlink&quot; title=&quot;Java_HOME&quot;&gt;&lt;/a&gt;Java_HOME&lt;/h3&gt;&lt;/blockquote&gt;
+&lt;p&gt;在下方的【系统变量】中，并不存在JAVA_HOME变量,那么我们需要点击【新建】&lt;br&gt;windows:&lt;br&gt;   JAVA_HOME:JDK安装的目录路径&lt;br&gt;   &lt;font color=&quot;red&quot;&gt;例：D:\Java\jdk1.8.0_151&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/JAVA_HOME.png&quot; alt=&quot;JAVA_HOME&quot;&gt;&lt;/p&gt;
+&lt;p&gt;用JAVA写的软件都需要本地JDK的支持，它回去找本地配的JAVA_HOME，很多时候是给第三方用的，比如maven，tomcat，hadoop。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="https://hudu-gugui.github.io/categories/Java/"/>
+    
+      <category term="Java环境配置" scheme="https://hudu-gugui.github.io/categories/Java/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     
     
-      <category term="Java" scheme="https://hudu-gugui.github.io/tags/Java/"/>
+      <category term="JDK" scheme="https://hudu-gugui.github.io/tags/JDK/"/>
     
-      <category term="Java基础" scheme="https://hudu-gugui.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
+      <category term="JRE" scheme="https://hudu-gugui.github.io/tags/JRE/"/>
+    
+      <category term="Java环境" scheme="https://hudu-gugui.github.io/tags/Java%E7%8E%AF%E5%A2%83/"/>
     
   </entry>
   
@@ -102,6 +128,34 @@
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>Java学习</title>
+    <link href="https://hudu-gugui.github.io/Java%E5%AD%A6%E4%B9%A0.html"/>
+    <id>https://hudu-gugui.github.io/Java学习.html</id>
+    <published>2019-07-30T01:02:04.000Z</published>
+    <updated>2019-07-30T07:25:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<!-- <iframe width="100%" height="560" src="//player.bilibili.com/player.html?aid=41949084&cid=75021374&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> --><p><a href="https://www.bilibili.com/" target="_blank" rel="noopener">哔哩哔哩</a></p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="110" src="//music.163.com/outchain/player?type=4&id=334309073&auto=0&height=90"></iframe><a id="more"></a><p><img src="/images/2.jpg" alt="图片"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;!-- &lt;iframe width=&quot;100%&quot; height=&quot;560&quot; src=&quot;//player.bilibili.com/player.html?aid=41949084&amp;cid=75021374&amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;哔哩哔哩&lt;/a&gt;&lt;/p&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;110&quot; src=&quot;//music.163.com/outchain/player?type=4&amp;id=334309073&amp;auto=0&amp;height=90&quot;&gt;&lt;/iframe&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="https://hudu-gugui.github.io/categories/Java/"/>
+    
+      <category term="初识Java" scheme="https://hudu-gugui.github.io/categories/Java/%E5%88%9D%E8%AF%86Java/"/>
+    
+    
+      <category term="Java" scheme="https://hudu-gugui.github.io/tags/Java/"/>
+    
+      <category term="Java基础" scheme="https://hudu-gugui.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
