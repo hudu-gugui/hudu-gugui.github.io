@@ -149,7 +149,7 @@
 <meta property="og:image" content="https://hudu-gugui.github.io/images/PATH1.png">
 <meta property="og:image" content="https://hudu-gugui.github.io/images/PATH2.png">
 <meta property="og:image" content="https://hudu-gugui.github.io/images/java-version.png">
-<meta property="og:updated_time" content="2019-08-03T08:44:16.121Z">
+<meta property="og:updated_time" content="2019-08-05T03:22:19.279Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java环境变量配置">
 <meta name="twitter:description" content="Java_HOME 在下方的【系统变量】中，并不存在JAVA_HOME变量,那么我们需要点击【新建】windows:   JAVA_HOME:JDK安装的目录路径   例：D:\Java\jdk1.8.0_151  用JAVA写的软件都需要本地JDK的支持，它回去找本地配的JAVA_HOME，很多时候是给第三方用的，比如maven，tomcat，hadoop。">
@@ -320,7 +320,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">6</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">25</span></a>
 
   </li>
         
@@ -338,7 +338,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">3</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">6</span></a>
 
   </li>
         
@@ -356,7 +356,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">5</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">10</span></a>
 
   </li>
         
@@ -538,7 +538,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-03 16:44:16" itemprop="dateModified" datetime="2019-08-03T16:44:16+08:00">2019-08-03</time>
+                <time title="修改时间：2019-08-05 11:22:19" itemprop="dateModified" datetime="2019-08-05T11:22:19+08:00">2019-08-05</time>
               </span>
             
           
@@ -624,6 +624,9 @@
 <blockquote>
 <h3 id="测试环境是否配置成功"><a href="#测试环境是否配置成功" class="headerlink" title="测试环境是否配置成功"></a>测试环境是否配置成功</h3></blockquote>
 <p>使用<kbd>Win</kbd>+<kbd>R</kbd> 输入cmd<br>在新打开的命令窗口中输入命令:java或者javac 后看到相应的信息提示即可.<br>  java -version<br><img src="/images/java-version.png" alt="PATH"></p>
+<blockquote>
+<h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3></blockquote>
+<p><font color size="4">rt.jar是JAVA基础类库，dt.jar是关于运行环境的类库，tools.jar是工具类库</font><br><font size="4">(1)rt.jar</font><br>&emsp;默认就在Root Classloader的加载路径里面的，而在Claspath配置该变量是不需要的；同时jre/lib目录下的其他jar:jce.jar、jsse.jar、charsets.jar、resources.jar都在Root Classloader中<br><font size="4">(2)tools.jar </font><br>&emsp;是系统用来编译一个类的时候用到的，即执行javac的时候用到javac XXX.java，实际上就是运行 <font color="pink">java -Calsspath=%JAVA_HOME%\lib\tools.jar&emsp;xx.xxx.Main XXX.java</font>，javac就是对上面命令的封装，所以tools.jar也不用加到classpath里面<br><font size="4">(3)dt.jar</font><br>&emsp;是关于运行环境的类库,主要是swing的包，在用到swing时最好加上</p>
 
       
     </div>
@@ -750,7 +753,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -773,7 +776,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -802,7 +811,45 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">25</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -873,7 +920,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-HOME"><span class="nav-number">1.</span> <span class="nav-text">Java_HOME</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CLASSPATH"><span class="nav-number">2.</span> <span class="nav-text">CLASSPATH</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PATh"><span class="nav-number">3.</span> <span class="nav-text">PATh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试环境是否配置成功"><span class="nav-number">4.</span> <span class="nav-text">测试环境是否配置成功</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-HOME"><span class="nav-number">1.</span> <span class="nav-text">Java_HOME</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CLASSPATH"><span class="nav-number">2.</span> <span class="nav-text">CLASSPATH</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PATh"><span class="nav-number">3.</span> <span class="nav-text">PATh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试环境是否配置成功"><span class="nav-number">4.</span> <span class="nav-text">测试环境是否配置成功</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拓展"><span class="nav-number">5.</span> <span class="nav-text">拓展</span></a></li></ol></div>
             
 
           </div>

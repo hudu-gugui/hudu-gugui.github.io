@@ -4,11 +4,168 @@
   
     
     <entry>
+      <title>泛型</title>
+      <link href="/%E6%B3%9B%E5%9E%8B.html"/>
+      <url>/%E6%B3%9B%E5%9E%8B.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><h1 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h1></blockquote><p>广泛的类型，类型参数化，所以泛型也称为泛型参数:<t></t></p><h2 id="泛型类"><a href="#泛型类" class="headerlink" title="泛型类"></a>泛型类</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 类名&lt;<span class="title">T</span>&gt;</span>&#123;</span><br><span class="line"><span class="keyword">private</span> T t;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setObj</span><span class="params">(T t)</span></span>&#123;</span><br><span class="line"><span class="keyword">this</span>.t = t;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">this</span>.t;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> 泛型 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 泛型 </tag>
+            
+            <tag> 泛型通配符 </tag>
+            
+            <tag> 泛型限定 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java高级编程_集合体系</title>
+      <link href="/Java%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-%E9%9B%86%E5%90%88%E4%BD%93%E7%B3%BB.html"/>
+      <url>/Java%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-%E9%9B%86%E5%90%88%E4%BD%93%E7%B3%BB.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><h1 id="集合体系"><a href="#集合体系" class="headerlink" title="集合体系"></a>集合体系</h1></blockquote><p><font size></font><br><strong>1.集合本身就是一个对象，用于存储其它对象；</strong><br><font color="red"><strong>2.集合中只能存储引用类型的数据，不能存储基本数据类型的数据；</strong></font><br><strong>3.集合和数组一样，都可以理解为存储数据的容器;</strong><br><strong>4.Collection集合：学顶层用底层;在单列体系中，Collectoin接口并不是最顶层接口,该接口有一个父接口：Iterable接口(单列集合的最顶层接口);</strong></p><a id="more"></a><h2 id="emsp-1-Iterator接口：迭代器接口：能够对实现了Iterable接口的集合进行遍历访问-迭代-；"><a href="#emsp-1-Iterator接口：迭代器接口：能够对实现了Iterable接口的集合进行遍历访问-迭代-；" class="headerlink" title="&emsp;1.Iterator接口：迭代器接口：能够对实现了Iterable接口的集合进行遍历访问(迭代)；"></a>&emsp;<strong>1.Iterator接口：迭代器接口：能够对实现了Iterable接口的集合进行遍历访问(迭代)；</strong></h2><h2 id="emsp-2-Iterable接口中的方法："><a href="#emsp-2-Iterable接口中的方法：" class="headerlink" title="&emsp;2.Iterable接口中的方法："></a>&emsp;<strong>2.Iterable接口中的方法：</strong></h2><p>&emsp;&emsp;Iterator iterator();<em>//获取迭代器对象，用于迭代遍历，实现了Iterable接口的集合</em></p><h2 id="emsp-3-Iterator接口中的方法："><a href="#emsp-3-Iterator接口中的方法：" class="headerlink" title="&emsp;3.Iterator接口中的方法："></a>&emsp;<strong>3.Iterator接口中的方法：</strong></h2><p>&emsp;&emsp;hasNext();&emsp;<em>//判断有没有下一个元素</em><br>&emsp;&emsp;next();&emsp;<em>//取出下一个元素</em><br>&emsp;&emsp;remove();&emsp;<em>//移除当前获取到的元素</em></p><h2 id="emsp-4-Collection接口中的方法"><a href="#emsp-4-Collection接口中的方法" class="headerlink" title="&emsp;4.Collection接口中的方法:"></a>&emsp;<strong>4.Collection接口中的方法:</strong></h2><p>&emsp;&emsp;add(Object o);&emsp;<em>//添加元素</em><br>&emsp;&emsp;remove(Object o);&emsp;<em>//删除元素</em><br>&emsp;&emsp;size();&emsp;<em>//获取元素个数</em><br>&emsp;&emsp;clear;&emsp;<em>//清空集合</em></p><h2 id="emsp-5-List接口，该类集合表示有序-向集合中添加元素的顺序和从集合中取出元素的顺序时一致的-，可重复的集合-并且集合中的元素可以为null。"><a href="#emsp-5-List接口，该类集合表示有序-向集合中添加元素的顺序和从集合中取出元素的顺序时一致的-，可重复的集合-并且集合中的元素可以为null。" class="headerlink" title="&emsp;5.List接口，该类集合表示有序(向集合中添加元素的顺序和从集合中取出元素的顺序时一致的)，可重复的集合,并且集合中的元素可以为null。"></a>&emsp;<strong>5.List接口，该类集合表示有序(向集合中添加元素的顺序和从集合中取出元素的顺序时一致的)，可重复的集合,并且集合中的元素可以为null。</strong></h2><p>&emsp;&emsp;add(int index,Object o);&emsp;<em>//在指定位置添加元素</em><br>&emsp;&emsp;remove(int index);&emsp;<em>//移除并返回指定位置上的元素</em><br>&emsp;&emsp;set(int index,Object o);&emsp;<em>//修改指定位置的元素</em><br>&emsp;&emsp;get(int index);&emsp;<em>//获取指定位置上的元素</em></p><h2 id="emsp-6-ArrayList类："><a href="#emsp-6-ArrayList类：" class="headerlink" title="&emsp;6.ArrayList类："></a>&emsp;<strong>6.ArrayList类：</strong></h2><p>&emsp;&emsp;List集合的具体实现，底层的实现原理是可变长度的数组；数组中只能添加同一种类型的元素，集合在没有指定泛型(jdk1.5中出现)的情况下可以添加任意引用类型(Object类型，自动转化，向上转型，显示转型)的数据；在没有指定泛型的时候，ArrayList把所有的类型升级为Object类型，本质上，其实还是原来的类型</p><h2 id="emsp-7-List集合元素的迭代遍历："><a href="#emsp-7-List集合元素的迭代遍历：" class="headerlink" title="&emsp;7.List集合元素的迭代遍历："></a>&emsp;<strong>7.List集合元素的迭代遍历：</strong></h2><p>&emsp;&emsp;1.通过索引遍历：<br>&emsp;&emsp;&emsp;&emsp;集合的索引的最小值是0，最大值是size-1;</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list.size()</span><br></pre></td></tr></table></figure><p>&emsp;&emsp;2.增强for循环遍历：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(Object o : list)&#123;&#125;</span><br></pre></td></tr></table></figure><p>&emsp;&emsp;3.迭代器遍历：<br>&emsp;&emsp;&emsp;&emsp;iterator();能够和该集合相关的迭代器对象(Iterator接口，hasnext，next，remove)；<br>&emsp;&emsp;&emsp;&emsp;listIterator();能够获取和List集合相关的List集合特有的迭代器对象(ListIterator接口)<br>&emsp;&emsp;4.JDK8中的Lambda表达式遍历</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">List l = <span class="keyword">new</span> ArrayList();</span><br><span class="line"><span class="comment">//三种表示方法都一样，第三种最简Lambda表达式</span></span><br><span class="line">l.forEach((Object o)-&gt;&#123;</span><br><span class="line">System.out.println(<span class="string">"+++"</span>+o);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">l.forEach((Object o)-&gt; System.out.println(o));</span><br><span class="line"></span><br><span class="line">l.forEach(System.out::println);</span><br></pre></td></tr></table></figure><h2 id="emsp-8-LinkList类：底层实现是双向链表"><a href="#emsp-8-LinkList类：底层实现是双向链表" class="headerlink" title="&emsp;8.LinkList类：底层实现是双向链表"></a>&emsp;<strong>8.LinkList类：底层实现是双向链表</strong></h2><p>&emsp;&emsp;该集合做元素的增加和删除比较快，做修改和查询比较慢<br>&emsp;&emsp;ArrayList集合由于底层实现是数组，所以增删比较慢，查询和修改比较快</p><h2 id="emsp-9-Set集合-接口-无序"><a href="#emsp-9-Set集合-接口-无序" class="headerlink" title="&emsp;9.Set集合(接口):无序"></a>&emsp;<strong>9.Set集合(接口):无序</strong></h2><p>&emsp;&emsp;Set集合无序(向集合中添加元素的顺序和取出元素的顺序不一致)并且不可重复，允许null值；Set集合底层的实现是Map集合的Key<br>&emsp;&emsp;1.Set接口：不支持索引操作的集合，没有特有方法<br>&emsp;&emsp;2.HashSet类：对应的底层的实现是HashMap的key，更底层的实现是哈希表：<br>&emsp;&emsp;&emsp;&emsp;增：add();<br>&emsp;&emsp;问：HashSet集合是如何保证元素不可重复的？<br>&emsp;&emsp;答：根据哈希值来判断向HashSet集合中添加的元素是否相同；先判断两个元素是否相同，如果哈希值不同，则是不同的元素，如果哈希值相同(哈希碰撞)，还要通过equals方法判断两个元素是否相等；如果自定义的的类型中重写了生成的哈希值的方法(hashCode方法)和equals方法，则按照重写的方法规则进行比较<br>&emsp;&emsp;如果要字定义重写类中的hashCode方法，最好重写equals方法，重写规则在hashCode方法中，由哪些数据参与产生了哈希值，就在equals方法中使用这些数据进行判断<br>&emsp;&emsp;&emsp;&emsp;删：remove();<br>&emsp;&emsp;&emsp;&emsp;改：直接修改对象的属性即可<br>&emsp;&emsp;&emsp;&emsp;查：迭代遍历查询<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;1.增强for循环<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2.迭代器<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;3.Lambda表达式</p><h3 id="emsp-9-TreeSet类："><a href="#emsp-9-TreeSet类：" class="headerlink" title="&emsp;9.TreeSet类："></a>&emsp;<strong>9.TreeSet类：</strong></h3><p>&emsp;&emsp;是Set接口的实现类，直接底层实现是Map集合的Key值，底层的实现是二叉树(平衡二叉树/红黑树)，无序不可重复，但是该集合可以对自身存储的元素进行排序，排序依据的是Comparable接口中的ComparaTo方法，只能将实现了的Comparable接口的实现类的对象保存至TreeSet结合中</p><h4 id="1-Comparable接口：此接口让其自实现类具有自我排序性："><a href="#1-Comparable接口：此接口让其自实现类具有自我排序性：" class="headerlink" title="1.Comparable接口：此接口让其自实现类具有自我排序性："></a>1.Comparable接口：此接口让其自实现类具有自我排序性：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">ComparaTo</span><span class="params">(Object o)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//例如：int x = a.compareTo(b);</span></span><br><span class="line"><span class="comment">//x&gt;0 a大于b;</span></span><br><span class="line"><span class="comment">//x=0 a等于b;</span></span><br><span class="line"><span class="comment">//x&lt;b a小于b;</span></span><br></pre></td></tr></table></figure><h4 id="3-Comparator接口：此接口能够重写实现了Comparable接口的子实现类的排序规则"><a href="#3-Comparator接口：此接口能够重写实现了Comparable接口的子实现类的排序规则" class="headerlink" title="3.Comparator接口：此接口能够重写实现了Comparable接口的子实现类的排序规则"></a>3.Comparator<t>接口：此接口能够重写实现了Comparable接口的子实现类的排序规则</t></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Compare</span><span class="params">(T t1,T t2)</span></span>;</span><br></pre></td></tr></table></figure><h4 id="4-TreeSet集合中不能添加不同引用类型的数据"><a href="#4-TreeSet集合中不能添加不同引用类型的数据" class="headerlink" title="4.TreeSet集合中不能添加不同引用类型的数据"></a>4.TreeSet集合中不能添加不同引用类型的数据</h4><h4 id="5-TreeSet集合保证元素不可重复的依据是Comparable接口中的CompareTo方法；"><a href="#5-TreeSet集合保证元素不可重复的依据是Comparable接口中的CompareTo方法；" class="headerlink" title="5.TreeSet集合保证元素不可重复的依据是Comparable接口中的CompareTo方法；"></a>5.TreeSet集合保证元素不可重复的依据是Comparable接口中的CompareTo方法；</h4><p>面试题：下面选项中哪些是类 A.B.D<br>A.ArrayList    B.HsahSet<br>C.SortedSet    D.AbstractSet</p><h3 id="emsp-10-Map集合："><a href="#emsp-10-Map集合：" class="headerlink" title="&emsp;10.Map集合："></a>&emsp;<strong>10.Map集合：</strong></h3><p>&emsp;&emsp;双列集合：结合中的元素是K，V成对出现的；Map集合的Key的特性与Set集合的特性完全一致，Map集合Value任意<br>&emsp;&emsp;&emsp;&emsp;1.增</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">put(Key,Value);</span><br></pre></td></tr></table></figure><p>&emsp;&emsp;&emsp;&emsp;2.删</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">remove(key);<span class="comment">//在Map集合中移除指定的key对应的K,V键值对，并且返回value</span></span><br></pre></td></tr></table></figure><p>&emsp;&emsp;&emsp;&emsp;3.改</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">put(Key,Value);</span><br></pre></td></tr></table></figure><p>&emsp;&emsp;&emsp;&emsp;4.查<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;1.将Map集合的所有的Key转化成Set集合(keySet()方法)，遍历Set集合获取每一个key，然后根据Key获取Map集合中对应的Value<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2.(值集)将Map结合的所有的Value转化为Collection集合(values()方法)Map集合中不能更具Value获取Key<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;3.(键值集)将Map集合的所有元素转化成Set集合(entrySet()方法)，该Set集合中的每个元素都是Map.Entry()类型，Entry表示的是Map集合中的每一个键值对<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;4.Lambda表达式<br>&emsp;&emsp;&emsp;&emsp;5.HashMap:HsahSet对应，键可以为null<br>&emsp;&emsp;&emsp;&emsp;6.TreeMap:TreeSet对应，键不能为null</p><h3 id="emsp-11-Hashtable："><a href="#emsp-11-Hashtable：" class="headerlink" title="&emsp;11.Hashtable："></a>&emsp;<strong>11.Hashtable：</strong></h3><p>&emsp;&emsp;双列集合，线程安全的集合，键值都不能为null</p><h3 id="emsp-12-Properties类："><a href="#emsp-12-Properties类：" class="headerlink" title="&emsp;12.Properties类："></a>&emsp;<strong>12.Properties类：</strong></h3><p>&emsp;&emsp;双列集合，继承至HashTable&lt;Object,Object&gt;;此类常用于在程序中获取或者存储与该程序相关的配置信息</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> 集合 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 高级编程 </tag>
+            
+            <tag> Collection </tag>
+            
+            <tag> Set集合 </tag>
+            
+            <tag> Map集合 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>字符编码</title>
+      <link href="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81.html"/>
+      <url>/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 编码 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ASCII </tag>
+            
+            <tag> ISO-8859-1 </tag>
+            
+            <tag> GB2312 </tag>
+            
+            <tag> GBK </tag>
+            
+            <tag> Unicode </tag>
+            
+            <tag> UTF </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据类型</title>
+      <link href="/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.html"/>
+      <url>/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1></blockquote><h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><p>booean:true或false，在JVM中会转换为0或1，1位<br>byte: 8位整数<br>short：16位整数<br>char：16位unicode字符<br>int：32位整数<br>float：32位浮点数<br>double：64位浮点数<br>long：64位整数</p><p>1字节 = 8bit</p><a id="more"></a><p>布尔类型：boolean<br>文本数据类型：char和String，<font color="red">String是一个类，不是基本数据类型</font><br>整数类型：byte、short、int、long<br>浮点数据类型：float、double</p><h2 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h2><p>类、接口、数组</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基本数据类型 </tag>
+            
+            <tag> 引用数据类型 </tag>
+            
+            <tag> 类型转换 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java标识、关键字、类型</title>
+      <link href="/Java%E6%A0%87%E8%AF%86%E3%80%81%E5%85%B3%E9%94%AE%E5%AD%97%E3%80%81%E7%B1%BB%E5%9E%8B.html"/>
+      <url>/Java%E6%A0%87%E8%AF%86%E3%80%81%E5%85%B3%E9%94%AE%E5%AD%97%E3%80%81%E7%B1%BB%E5%9E%8B.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1></blockquote><p>用于解释说明性文字，作用：使用部分内容只为程序员可见，不为编译器所编译、虚拟机所执行。<br>&emsp;&emsp;单行注释：//注释文字<br>&emsp;&emsp;多行注释：/<em>注释文字</em>/<br>&emsp;&emsp;文档注释：/**注释文字/</p><p>其中文档注释，当这类注释出现在任何声明(如类的声明、类的成员变量的声明或者类的成员方法的声明)之前时，会作为JavaDoc文档的内容；</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@author</span>类的作者</span><br><span class="line"><span class="meta">@version</span>类的版本</span><br><span class="line"><span class="meta">@param</span>方法的参数</span><br><span class="line"><span class="meta">@return</span>方法的返回类型</span><br><span class="line"><span class="meta">@exception</span>方法抛出的异常</span><br><span class="line"><span class="meta">@see</span>另外参照...</span><br><span class="line"><span class="meta">@since</span>从什么时候开始使用的</span><br></pre></td></tr></table></figure><a id="more"></a><p><font size="4">使用javadoc进行编译：</font><br><font color="pink">javadoc -d doc -author -version src/CommentTest.java</font><br><font size="4">或者：</font><br><font color="pink">javadoc -d doc -author -version src/*.java</font></p><blockquote><h1 id="分号、块、空格"><a href="#分号、块、空格" class="headerlink" title="分号、块、空格"></a>分号、块、空格</h1></blockquote><p>(1)每个语句短语以;结束<br>类的声明最后不需要加<br>方法的声明最后不需要加<br>属性的声明最后一定要加<br>(2)代码段以{}结束<br>常见的有：<br>    类的声明后加{}<br>    方法的声明后加{}<br>    注意:代码的{}后面都不加;<br>(3)空白处（空格、tab键、新行和回车（续航符））是无关紧要的。</p><blockquote><h1 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h1></blockquote><p>给类，接口，方法，变量名等起名字时使用的字符序列<br>英文大小写字母，数字字符，$和_。<br>不能使用关键字，不能数字开头，区分大小写。</p><blockquote><h1 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h1></blockquote><p>Java语言的关键字时程序代码中的特殊字符。包括：<br>类和接口的声明——class,extends,implements,interface<br>包引入和包声明——import,package<br>数据类型——boolean,byte,char,double,float,int,long,short<br>某些数据类型的可选值——false,true,null<br>流程控制——break,case,coutinue,default,do,else,for,return,switch,while<br>异常处理——catch.finally,throw,throws,try<br>修饰符——abstract,final,native,private,protected,public,static,synchronized,transient,colatile<br>操作符——instanceof<br>创建对象——new<br>引用——this,super<br>方法返回类型——void<br><font color="red">goto const(在java中不使用，但是保留为关键字)</font>严格地说，”true”和”false”不是关键字，它们时布尔类型值</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 标识 </tag>
+            
+            <tag> 关键字 </tag>
+            
+            <tag> 类型 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>初识Java</title>
       <link href="/%E5%88%9D%E8%AF%86Java.html"/>
       <url>/%E5%88%9D%E8%AF%86Java.html</url>
       
-        <content type="html"><![CDATA[<blockquote><h1 id="什么是Java？"><a href="#什么是Java？" class="headerlink" title="什么是Java？"></a>什么是Java？</h1></blockquote><p>是编程语言<br>开发环境：提供了一套应用程序的接口，解压rt.jar，解压src.zip查看源码<br>应用程序环境<br>并不仅仅是编程语言，而更准确地说是一个生态系统</p><blockquote><h1 id="为什么发明Java？"><a href="#为什么发明Java？" class="headerlink" title="为什么发明Java？"></a>为什么发明Java？</h1></blockquote><p>1.提供了一套编译环境<br>&emsp;快速发展<br>&emsp;一次编写，到处运行，应用程序跨平台，中间层：给上层应用提供了一套API，针对不同的操作系统提供了JVM<br>&emsp;多线程，程序级别的多线程<br>&emsp;支持动态更新，其中一个发生了改变，这个编译后，其他的额能自动更新。<br>2.提供了一个更简单的编程方法<br>&emsp;更健壮：没有指针，没有内存管理，面向对象编程<br>3.如何实现上述目标的<br>&emsp;JVM，垃圾回收机制(Garbage Collection)，代码安全验证</p><a id="more"></a><blockquote><h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1></blockquote><h2 id="Java基础分为三部分："><a href="#Java基础分为三部分：" class="headerlink" title="Java基础分为三部分："></a>Java基础分为三部分：</h2><p>&emsp;1.基础语法：基本语句、流程控制<br>&emsp;2.编程思想：面向对象，第一层：封装、继承、多态，第二层：怎么使用面向对象的思想去解决问题。<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;第三层：现实问题的处理，如何使用面向对象解决现实问题。<br>&emsp;3.高级应用：线程、网络、IO、XML解析。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Driver</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Track myTrack = <span class="keyword">new</span> Track();             </span><br><span class="line">    myTrack.setTitle(<span class="string">"Watching The Wheels"</span>);</span><br><span class="line">    Duration myDuration = <span class="keyword">new</span> Duration(<span class="number">0</span>, <span class="number">3</span>, <span class="number">48</span>);</span><br><span class="line">    myTrack.setDuration(myDuration);</span><br><span class="line">    System.out.println(<span class="string">"myTrack is: "</span> + myTrack);   </span><br><span class="line">    System.out.println(<span class="string">"Title = "</span> + myTrack.getTitle());</span><br><span class="line">    System.out.println(<span class="string">"Duration = "</span> + myTrack.getDuration().toString());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<blockquote><h1 id="什么是Java？"><a href="#什么是Java？" class="headerlink" title="什么是Java？"></a>什么是Java？</h1></blockquote><p>&emsp;是编程语言<br>&emsp;开发环境：提供了一套应用程序的接口，解压rt.jar，解压src.zip查看源码<br>&emsp;应用程序环境<br>&emsp;并不仅仅是编程语言，而更准确地说是一个生态系统</p><blockquote><h1 id="为什么发明Java？"><a href="#为什么发明Java？" class="headerlink" title="为什么发明Java？"></a>为什么发明Java？</h1></blockquote><p><font size="4">1.提供了一套编译环境</font><br>&emsp;快速发展<br>&emsp;一次编写，到处运行，应用程序跨平台，中间层：给上层应用提供了一套API，针对不同的操作系统提供了JVM<br>&emsp;多线程，程序级别的多线程<br>&emsp;支持动态更新，其中一个发生了改变，这个编译后，其他的额能自动更新。<br><font size="4">2.提供了一个更简单的编程方法</font><br>&emsp;更健壮：没有指针，没有内存管理，面向对象编程<br><font size="4">3.如何实现上述目标的</font><br>&emsp;JVM，垃圾回收机制(Garbage Collection)，代码安全验证</p><a id="more"></a><blockquote><h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1></blockquote><h2 id="Java基础分为三部分："><a href="#Java基础分为三部分：" class="headerlink" title="Java基础分为三部分："></a>Java基础分为三部分：</h2><p>&emsp;<font size="4">1.基础语法：</font>基本语句、流程控制<br>&emsp;<font size="4">2.编程思想：</font>面向对象，第一层：封装、继承、多态，第二层：怎么使用面向对象的思想去解决问题。<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;第三层：现实问题的处理，如何使用面向对象解决现实问题。<br>&emsp;<font size="4">3.高级应用：</font>线程、网络、IO、XML解析。</p><blockquote><h1 id="Java代码安全"><a href="#Java代码安全" class="headerlink" title="Java代码安全"></a>Java代码安全</h1></blockquote><p><font size="5">Java程序执行流程</font><br>    &emsp;<font size="4">编辑，编译，类加载</font><br>    &emsp;<font size="4">类加载：</font>加载字节码文件<br>    &emsp;<font size="4">字节码验证：</font><br>        &emsp;&emsp;验证代码和虚拟机版本是否匹配，向下兼容<br>        &emsp;&emsp;代码不能破坏系统的完整性,也就是不能操作硬件<br>        &emsp;&emsp;无堆栈上溢和下溢<br>        &emsp;&emsp;参数类型是否正确<br>        &emsp;&emsp;类型转换是否正确<br>    &emsp;<font size="4">类加载器：</font><br>        &emsp;&emsp;1.启动类加载器：rt.jar<br>        &emsp;&emsp;2.扩展类加载器：jre/lib/ext/<br>        &emsp;&emsp;3.系统类加载器：自己的class<br>        &emsp;&emsp;4.网络类加载器：<br>        &emsp;<font size="4">双亲委托机制：</font>自顶向下</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Driver</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Track myTrack = <span class="keyword">new</span> Track();             </span><br><span class="line">    myTrack.setTitle(<span class="string">"Watching The Wheels"</span>);</span><br><span class="line">    Duration myDuration = <span class="keyword">new</span> Duration(<span class="number">0</span>, <span class="number">3</span>, <span class="number">48</span>);</span><br><span class="line">    myTrack.setDuration(myDuration);</span><br><span class="line">    System.out.println(<span class="string">"myTrack is: "</span> + myTrack);   </span><br><span class="line">    System.out.println(<span class="string">"Title = "</span> + myTrack.getTitle());</span><br><span class="line">    System.out.println(<span class="string">"Duration = "</span> + myTrack.getDuration().toString());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -68,7 +225,7 @@
       <link href="/Java%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE.html"/>
       <url>/Java%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE.html</url>
       
-        <content type="html"><![CDATA[<blockquote><h3 id="Java-HOME"><a href="#Java-HOME" class="headerlink" title="Java_HOME"></a>Java_HOME</h3></blockquote><p>在下方的【系统变量】中，并不存在JAVA_HOME变量,那么我们需要点击【新建】<br>windows:<br>   JAVA_HOME:JDK安装的目录路径<br>   <font color="red">例：D:\Java\jdk1.8.0_151</font></p><p><img src="/images/JAVA_HOME.png" alt="JAVA_HOME"></p><p>用JAVA写的软件都需要本地JDK的支持，它回去找本地配的JAVA_HOME，很多时候是给第三方用的，比如maven，tomcat，hadoop。</p><a id="more"></a><blockquote><h3 id="CLASSPATH"><a href="#CLASSPATH" class="headerlink" title="CLASSPATH"></a>CLASSPATH</h3></blockquote><p>class文件、jar包 的搜索路径。保存的是一些目录和jar文件的地址，这些路径是为java程序在编译和运行时搜索类而用的，为java程序所依赖的接口、类指定一个搜索路径。<font color="red">一般不需要配置，默认值为.当前目录。</font> </p><blockquote><h3 id="PATh"><a href="#PATh" class="headerlink" title="PATh"></a>PATh</h3></blockquote><p>在cmd终端运行dos命令时命令对应一个特定功能，特定功能由对应应用程序实现，PATH里面存放命令的搜索路径。JDK安装目录里面的命令目录。</p><p>同样是在【系统变量中】我们可以看到path变量已经存在，那么我们只需要点击【编辑】，进入path变量的编辑</p><p><img src="/images/PATH1.png" alt="PATH"></p><p>变量名不变，变量值改为【%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;】，最后点击确定。</p><p><img src="/images/PATH2.png" alt="PATH"></p><blockquote><h3 id="测试环境是否配置成功"><a href="#测试环境是否配置成功" class="headerlink" title="测试环境是否配置成功"></a>测试环境是否配置成功</h3></blockquote><p>使用<kbd>Win</kbd>+<kbd>R</kbd> 输入cmd<br>在新打开的命令窗口中输入命令:java或者javac 后看到相应的信息提示即可.<br>  java -version<br><img src="/images/java-version.png" alt="PATH"></p>]]></content>
+        <content type="html"><![CDATA[<blockquote><h3 id="Java-HOME"><a href="#Java-HOME" class="headerlink" title="Java_HOME"></a>Java_HOME</h3></blockquote><p>在下方的【系统变量】中，并不存在JAVA_HOME变量,那么我们需要点击【新建】<br>windows:<br>   JAVA_HOME:JDK安装的目录路径<br>   <font color="red">例：D:\Java\jdk1.8.0_151</font></p><p><img src="/images/JAVA_HOME.png" alt="JAVA_HOME"></p><p>用JAVA写的软件都需要本地JDK的支持，它回去找本地配的JAVA_HOME，很多时候是给第三方用的，比如maven，tomcat，hadoop。</p><a id="more"></a><blockquote><h3 id="CLASSPATH"><a href="#CLASSPATH" class="headerlink" title="CLASSPATH"></a>CLASSPATH</h3></blockquote><p>class文件、jar包 的搜索路径。保存的是一些目录和jar文件的地址，这些路径是为java程序在编译和运行时搜索类而用的，为java程序所依赖的接口、类指定一个搜索路径。<font color="red">一般不需要配置，默认值为.当前目录。</font> </p><blockquote><h3 id="PATh"><a href="#PATh" class="headerlink" title="PATh"></a>PATh</h3></blockquote><p>在cmd终端运行dos命令时命令对应一个特定功能，特定功能由对应应用程序实现，PATH里面存放命令的搜索路径。JDK安装目录里面的命令目录。</p><p>同样是在【系统变量中】我们可以看到path变量已经存在，那么我们只需要点击【编辑】，进入path变量的编辑</p><p><img src="/images/PATH1.png" alt="PATH"></p><p>变量名不变，变量值改为【%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;】，最后点击确定。</p><p><img src="/images/PATH2.png" alt="PATH"></p><blockquote><h3 id="测试环境是否配置成功"><a href="#测试环境是否配置成功" class="headerlink" title="测试环境是否配置成功"></a>测试环境是否配置成功</h3></blockquote><p>使用<kbd>Win</kbd>+<kbd>R</kbd> 输入cmd<br>在新打开的命令窗口中输入命令:java或者javac 后看到相应的信息提示即可.<br>  java -version<br><img src="/images/java-version.png" alt="PATH"></p><blockquote><h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3></blockquote><p><font color size="4">rt.jar是JAVA基础类库，dt.jar是关于运行环境的类库，tools.jar是工具类库</font><br><font size="4">(1)rt.jar</font><br>&emsp;默认就在Root Classloader的加载路径里面的，而在Claspath配置该变量是不需要的；同时jre/lib目录下的其他jar:jce.jar、jsse.jar、charsets.jar、resources.jar都在Root Classloader中<br><font size="4">(2)tools.jar </font><br>&emsp;是系统用来编译一个类的时候用到的，即执行javac的时候用到javac XXX.java，实际上就是运行 <font color="pink">java -Calsspath=%JAVA_HOME%\lib\tools.jar&emsp;xx.xxx.Main XXX.java</font>，javac就是对上面命令的封装，所以tools.jar也不用加到classpath里面<br><font size="4">(3)dt.jar</font><br>&emsp;是关于运行环境的类库,主要是swing的包，在用到swing时最好加上</p>]]></content>
       
       
       <categories>
